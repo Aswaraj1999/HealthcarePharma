@@ -1,0 +1,78 @@
+create database HealthPharma;
+use HealthPharma;
+
+
+create table userdata (
+Fname varchar(30),
+Lname varchar(30),
+Age varchar(30),
+Gender Varchar(20),
+ContactNo Varchar(30),
+UserCategory varchar(30),
+Email varchar(30),
+QAnswer varchar(100),
+UserID varchar(30),
+Password varchar(30)
+);
+
+select * from userdata;
+Delete from userdata where Gender='null';
+
+
+create table medicinedata (
+Mediname varchar(50) NOT NULL,
+Meditype varchar(30) NOT NULL,
+Medibrand varchar(30) NOT NULL,
+Qty varchar(30) Not null,
+Price varchar(30) not null,
+Expdate varchar(30) not null);
+select * from medicinedata;
+insert into medicinedata
+values('ss','Capsule','Cipla',500,18,'06-2024');
+delete from medicinedata where Price='';
+
+
+
+create table userdata (
+Fname varchar(30),
+Lname varchar(30),
+Age varchar(30),
+Gender Varchar(20),
+ContactNo Varchar(30),
+UserCategory varchar(30),
+Email varchar(30),
+QAnswer varchar(100),
+UserID varchar(30),
+Password varchar(30)
+);
+
+
+select * from userdata;
+delete from userdata where QAnswer='admin';
+
+
+create table Ticket (
+Ticketno int primary key auto_increment,
+UCategory varchar(30),
+Username varchar(50),
+Qry varchar(50),
+Qdesc varchar(200),
+Status varchar(30) default 'pending'
+);
+
+select * from Ticket;
+
+create table orderdetails(
+orderid int primary key auto_increment,
+Userid varchar(60),
+Pname varchar(100),
+Dname varchar(100),
+Age varchar(30),
+Addr varchar(200),
+Mname varchar(40),
+mqty varchar(40),
+mprice varchar(70),
+status varchar(40) default 'Inprocess'
+);
+
+select * from orderdetails;
